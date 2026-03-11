@@ -5,20 +5,20 @@
 class LetterboxdTui < Formula
   desc "Local-first Letterboxd TUI with diary sync, stats, and heatmaps"
   homepage "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap/releases/download/v0.1.2/letterboxd-tui_darwin_amd64.tar.gz"
-      sha256 "f5fdf22ca499dbacd5d35c6f41eca01f99af3a2f392d7b5ea70ae55d4d6deae2"
+      url "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap/releases/download/v0.1.3/letterboxd-tui_darwin_amd64.tar.gz"
+      sha256 "876d650905d80a15beb60ba776751e16a21b201952cf7fe8ec3a521a1486d3d0"
 
       define_method(:install) do
         bin.install "letterboxd-tui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap/releases/download/v0.1.2/letterboxd-tui_darwin_arm64.tar.gz"
-      sha256 "e7ae4f6acf059898c30fc55627d7018d652c380a0bf4060b3c8ac67475fb06c5"
+      url "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap/releases/download/v0.1.3/letterboxd-tui_darwin_arm64.tar.gz"
+      sha256 "013fc4a52da8ba2ad896a00b974eeddd5c7b37b3585fb6701a38cb1143052736"
 
       define_method(:install) do
         bin.install "letterboxd-tui"
@@ -28,15 +28,15 @@ class LetterboxdTui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap/releases/download/v0.1.2/letterboxd-tui_linux_amd64.tar.gz"
-      sha256 "e3f8298182869d8c6b8de7639d4c30dd0fad5101108c3cb81ebe1f40d0c64411"
+      url "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap/releases/download/v0.1.3/letterboxd-tui_linux_amd64.tar.gz"
+      sha256 "97f762ace2db6cd9a92ad431ae9cd8f4943d978ac33a821a94f6872f74651fdd"
       define_method(:install) do
         bin.install "letterboxd-tui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap/releases/download/v0.1.2/letterboxd-tui_linux_arm64.tar.gz"
-      sha256 "f3c90aee64dba5184f533dbd7867c9d533cd86cc2c299f97e26fe39385086369"
+      url "https://github.com/moKshagna-p/letterboxd-TUI-Heatmap/releases/download/v0.1.3/letterboxd-tui_linux_arm64.tar.gz"
+      sha256 "7333d0ddb96516a33abe1d1857daf14da27ab0542477f37038ddb598555b57f4"
       define_method(:install) do
         bin.install "letterboxd-tui"
       end
