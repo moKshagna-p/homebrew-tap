@@ -10,7 +10,7 @@ class LetterboxdTui < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/moKshagna-p/letterboxd-CLI/releases/download/v0.1.4/letterboxd-tui_darwin_amd64.tar.gz"
-      sha256 "725be7ba2b0d34f8e4f2c3182b70d980df703c525d4c2a363123900153033b23"
+      sha256 "c64e05196ca368e9a10e68eab511794eb9596dab3c951f4b107f8e6dc9af3cbd"
 
       define_method(:install) do
         bin.install "letterboxd-tui"
@@ -18,7 +18,7 @@ class LetterboxdTui < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/moKshagna-p/letterboxd-CLI/releases/download/v0.1.4/letterboxd-tui_darwin_arm64.tar.gz"
-      sha256 "8cb198f825aabf91ac356dab812c1a3ed41f2a2df44bc2f506c2f950fc571084"
+      sha256 "05b44a8e1090b059cf42d55dad2c5e089956bf8f3194bc9b8b01eb469688e2df"
 
       define_method(:install) do
         bin.install "letterboxd-tui"
@@ -29,14 +29,14 @@ class LetterboxdTui < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/moKshagna-p/letterboxd-CLI/releases/download/v0.1.4/letterboxd-tui_linux_amd64.tar.gz"
-      sha256 "fa41b11b2b01719ba34cfdae10cf558339849f7a8a12e44065f7359861c9aa7f"
+      sha256 "501e7cb56f8146c175309061383cff18df65c232e004e9165ba4a0dbede725c0"
       define_method(:install) do
         bin.install "letterboxd-tui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/moKshagna-p/letterboxd-CLI/releases/download/v0.1.4/letterboxd-tui_linux_arm64.tar.gz"
-      sha256 "82b19e9c5eca1cae0429f6345743e9cd25239c376a99f6a64d262917b56f71e5"
+      sha256 "d0479b8dd6c98007fced46100df678356badfc19135e169e2611a020569d29a0"
       define_method(:install) do
         bin.install "letterboxd-tui"
       end
