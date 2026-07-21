@@ -1,0 +1,28 @@
+name: Formula checks
+
+on:
+  push:
+    paths:
+      - "Formula/**"
+      - ".github/workflows/formula-checks.yml"
+  pull_request:
+    paths:
+      - "Formula/**"
+      - ".github/workflows/formula-checks.yml"
+  workflow_dispatch:
+
+jobs:
+  validate-lrc:
+    name: Audit and install lrc
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit formula
+        run: brew audit --strict --new Formula/lrc.rb
+
+      - name: Source-install formula
+        run: brew install --build-from-source Formula/lrc.rb
+
+      - name: Check installed command
+        run: test "$(lyrics --version)" = "0.1.0"
